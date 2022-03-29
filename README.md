@@ -24,5 +24,8 @@ THEN I am taken to the corresponding section of the README
 
 ## Walkthrough Video
 
+## Github Link
+[README Generator](https://github.com/BKWes/readme-gen)
+
 ## Created By:
 [Weston Barnes](https://github.com/BKWes)
