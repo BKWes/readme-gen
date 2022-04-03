@@ -6,7 +6,7 @@ const questions = [
     {
         type: 'input',
         name: 'projectName',
-        message: 'What is the name of your project?',
+        message: 'What is the name of your project? (Required)',
         validate: nameInput => {
             if (nameInput) {
                 return true;
@@ -19,7 +19,7 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Provide a description of your project.',
+        message: 'Provide a description of your project. (Required)',
         validate: descriptionInput => {
             if (descriptionInput) {
                 return true;
@@ -48,6 +48,27 @@ const questions = [
         type: 'input',
         name: 'tests',
         message: 'Provide instructions for testing your application.'
+    }
+];
+// question array for user info
+const userInfo = [
+    {
+        type: 'input',
+        name: 'github',
+        message: 'What is your Github username? (Required)',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('You must enter your Github username!');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What is your email address?'
     }
 ];
 
