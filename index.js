@@ -54,6 +54,19 @@ const promptProject = project => {
     },
     {
         type: 'input',
+        name: name,
+        message: 'What is your name?',
+        validate: nameInput => {
+            if (nameInput) {
+                return true;
+            } else {
+                console.log('Please provide your name');
+                return false;
+            }
+        }
+    },
+    {
+        type: 'input',
         name: 'github',
         message: 'What is your Github username? (Required)',
         validate: githubInput => {

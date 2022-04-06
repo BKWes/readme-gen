@@ -18,10 +18,10 @@ function generateMarkdown(data) {
   ## Description:  
   - ${data.description}
 
-  ## Installation Instructions  
+  ## Installation   
   - ${data.install}
 
-  ## Usage Information  
+  ## Usage   
   - ${data.usage}
 
   ## Contribution Guidelines
@@ -35,7 +35,7 @@ function generateMarkdown(data) {
   ## Questions
   Here is a link to my [Github page](https://github.com/${data.github})  
   If you would like to contact me for further information or details on collaboration  
-  Email: ${data.email}
+  Email ${data.name}: ${data.email}
 `;
 };
 
