@@ -54,7 +54,12 @@ const promptProject = project => {
     },
     {
         type: 'input',
-        name: name,
+        name: 'license',
+        message: 'What license are you using for this project?'
+    },
+    {
+        type: 'input',
+        name: 'name',
         message: 'What is your name?',
         validate: nameInput => {
             if (nameInput) {
