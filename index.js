@@ -1,8 +1,11 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
-const generateMarkdown = require('./utils/generateMarkdown.js');
+const { generateMarkdown, writeFile } = require('./utils/generateMarkdown.js');
 // TODO: Create an array of questions for user input
-const questions = [
+
+const promptProject = project => {
+    return inquirer
+      .prompt([
     {
         type: 'input',
         name: 'projectName',
@@ -48,10 +51,7 @@ const questions = [
         type: 'input',
         name: 'tests',
         message: 'Provide instructions for testing your application.'
-    }
-];
-// question array for user info
-const userInfo = [
+    },
     {
         type: 'input',
         name: 'github',
@@ -70,13 +70,24 @@ const userInfo = [
         name: 'email',
         message: 'What is your email address?'
     }
-];
+  ])
+};
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+
+}
 
 // Function call to initialize app
 init();
+
+promptProject()
+  .then(data => {
+    return generateMarkdown(data);
+})
+  .then(pageMD => {
+      return writeFile(pageMD)
+  })
