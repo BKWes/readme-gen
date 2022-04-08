@@ -69,8 +69,10 @@ const writeFile = fileContent => {
           }
           resolve({
               ok: true,
-              message: 'File created!'
-          });
+            });
+          if (resolve) {
+            console.log('File created in dist/!');
+          }
       });
   });
 };
