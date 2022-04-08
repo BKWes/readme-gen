@@ -36,19 +36,19 @@ function renderLicenseLink(license) {
 function generateMarkdown(data) {
   return `# ${data.projectName}  ${renderLicenseBadge(data.license)}
   ## Description:  
-  - ${data.description}
+  ${data.description}
 
   ## Installation   
-  - ${data.install}
+  ${data.install}
 
   ## Usage   
-  - ${data.usage}
+  ${data.usage}
 
   ## Contribution Guidelines
-  - ${data.contributing}
+  ${data.contributing}
 
   ## Test Instructions
-  - ${data.tests}
+  ${data.tests}
 
   ## Licences
   This application is covered under the ${renderLicenseLink(data.license)}.
