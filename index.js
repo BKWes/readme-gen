@@ -54,7 +54,12 @@ const promptProject = project => {
     },
     {
         type: 'input',
-        name: name,
+        name: 'license',
+        message: 'What license are you using for this project? Choose from MIT, BSD 2, or GNU.',
+    },
+    {
+        type: 'input',
+        name: 'name',
         message: 'What is your name?',
         validate: nameInput => {
             if (nameInput) {
@@ -86,21 +91,10 @@ const promptProject = project => {
   ])
 };
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
-// TODO: Create a function to initialize app
-function init() {
-
-}
-
-// Function call to initialize app
-init();
-
 promptProject()
   .then(data => {
     return generateMarkdown(data);
 })
   .then(pageMD => {
-      return writeFile(pageMD)
+      return writeFile(pageMD);
   })
