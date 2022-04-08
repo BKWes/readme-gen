@@ -6,8 +6,7 @@ function renderLicenseBadge(license) {
   if (!license) {
     return '';
   }
-
-  switch (license) {
+  switch (license.toUpperCase()) {
     case 'MIT':
       return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
     case 'BSD 2':
@@ -23,7 +22,7 @@ function renderLicenseLink(license) {
   if (!license) {
     return '';
   }
-  switch (license) {
+  switch (license.toUpperCase()) {
     case 'MIT':
       return '[MIT License](https://choosealicense.com/licenses/mit/)';
     case 'BSD 2':
