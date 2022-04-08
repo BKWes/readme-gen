@@ -23,7 +23,7 @@ WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README  
 
 ## Walkthrough Video
-[Here is a link to the video screen recording on Google Drive](https://drive.google.com/file/d/1ShPqdlwb7cV0cCFYJv6zqBN-87kFTcWA/preview)
+[Here is a link to the screen recording on Google Drive](https://drive.google.com/file/d/1ShPqdlwb7cV0cCFYJv6zqBN-87kFTcWA/preview)
 
 ## Github Link
 [README Generator](https://github.com/BKWes/readme-gen)
